@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  max-height: 100vh;
+  background: url("./img/bg.jpg") no-repeat fixed;
+  object-fit: fill;
+}
+
+/* -------------------------------------------------------- */
+/* Header Section */
+/* -------------------------------------------------------- */
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 20vh;
+}
+
+header h1 {
+  margin-top: 3vh;
+  text-transform: uppercase;
+  font-size: 4rem;
+  color: #f37777;
+  filter: drop-shadow(1px 3px 4px #000);
+  animation: h1Color 0.2s infinite ease;
+}
+
+header h1:hover {
+  animation-duration: 1s;
+}
+
+@keyframes h1Color {
+  0% {
+    color: #f37777;
+  }
+  100% {
+    color: #eeeeee;
+  }
+}
+
+.add {
+  position: absolute;
+  margin-top: 2vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  position: relative;
+}
+
+.add textarea {
+  padding: 5px 0;
+  resize: none;
+  width: 30vw;
+  height: 5vh;
+  border: none;
+  overflow: hidden;
+}
+
+.add span {
+  width: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: background 1s ease;
+  cursor: pointer;
+  background: #0b408f;
+}
+
+.add span:hover {
+  background: #174ec5;
+}
+
+.add span i {
+  color: #eeeeee;
+}
+
+/* -------------------------------------------------------- */
+/* Main Section */
+/* -------------------------------------------------------- */
+
+main {
+  padding-left: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20vh;
+  padding-top: 2vh;
+  max-height: 75vh;
+  overflow-y: scroll;
+}
+
+.todo-list li {
+  margin: 1vh 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  position: relative;
+}
+
+.todo-list li textarea {
+  padding: 5px 0;
+  resize: vertical;
+  width: 30vw;
+  height: 5vh;
+  border: none;
+  overflow: hidden;
+}
+
+.todo-list li span {
+  width: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: background 1s ease;
+  cursor: pointer;
+}
+
+.todo-edit {
+  background: #9b5c09;
+}
+
+.todo-edit:hover {
+  background: #c27108;
+}
+
+.todo-remove {
+  background: #8f0b0b;
+}
+
+.todo-remove:hover {
+  background: #c51717;
+}
+
+.todo-done {
+  background: #1a8f0b;
+}
+.todo-done:hover {
+  background: #1dc517;
+}
+
+.todo-done-text {
+  text-decoration: line-through;
+}
+
+.todo-list li span i {
+  color: #eeeeee;
+}
+
+/* -------------------------------------------------------- */
+/* Footer Section */
+/* -------------------------------------------------------- */
+
+footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  /* padding: 10px 0; */
+  min-height: 3.4vh;
+}
+
+footer p {
+  color: #eeeeee;
+}
+
+footer p a {
+  color: #f37777;
+  text-decoration: none;
+}
+
+.grim {
+  position: absolute;
+  bottom: -0px;
+  left: 5vw;
+  transform: rotateY(180deg);
+  height: 30vh;
+}
+
+
+/* -------------------------------------------------------- */
+/* Mobile Section */
+/* -------------------------------------------------------- */
+
+@media screen and (max-width: 768px) {
+  /* ---------------------------- */
+  /* Header Section */
+  /* ---------------------------- */
+
+  header h1 {
+    font-size: 3rem;
+  }
+
+  .add {
+    margin-top: 4vh;
+  }
+
+  .add textarea {
+    width: 80vw;
+    height: 6vh;
+  }
+
+  .add span {
+    width: 5vw;
+  }
+
+  /* ---------------------------- */
+  /* Main Section */
+  /* ---------------------------- */
+  .todo-list li textarea {
+    width: 80vw;
+    height: 6vh;
+  }
+
+  .todo-list li span {
+    width: 5vw;
+  }
+
+  /* ---------------------------- */
+  /* Footer Section */
+  /* ---------------------------- */
+  .grim {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .add textarea {
+    width: 60vw;
+    height: 4vh;
+  }
+
+  .add span {
+    width: 5vw;
+  }
+  /* ---------------------------- */
+  /* Main Section */
+  /* ---------------------------- */
+  .todo-list li textarea {
+    width: 60vw;
+    height: 4vh;
+  }
+
+  .todo-list li span {
+    width: 5vw;
+  }
+
+  /* ---------------------------- */
+  /* Footer Section */
+  /* ---------------------------- */
+  .grim {
+    display: none;
+  }
+}
